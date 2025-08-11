@@ -16,25 +16,25 @@
     combos {
         compatible = "zmk,combos";
         combo_spc {
-            timeout-ms = <100>;
+            timeout-ms = <75>;
             key-positions = <1 2>;
             bindings = <&kp SPACE>;
             layers = <0>;
         };
         combo_tab {
-            timeout-ms = <100>;
+            timeout-ms = <75>;
             key-positions = <21 22>;
             bindings = <&kp TAB>;
             layers = <0>;
         };
         combo_bspc {
-            timeout-ms = <100>;
+            timeout-ms = <75>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
             layers = <0>;
         };
         combo_ent {
-            timeout-ms = <100>;
+            timeout-ms = <75>;
             key-positions = <27 28>;
             bindings = <&kp ENTER>;
             layers = <0>;
@@ -97,14 +97,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
         };
         tt2: tap_toggle_layer_2 {
             display-name = "Tap-Toggle-Layer-2";
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
         };
     };
 
@@ -123,7 +123,7 @@
                 &none      &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp LALT   &none              &none  &kp N1  &kp N2  &kp N3  &none
                 &kp LC(A)  &kp LGUI        &kp LSHFT        &kp LCTRL  &none              &none  &kp N4  &kp N5  &kp N6  &none
                 &kp LC(Z)  &kp LC(X)       &kp LC(C)        &kp LC(V)  &kp LC(B)          &none  &kp N7  &kp N8  &kp N9  &kp N0
-                                                               &none      &trans          &mo 3      &none
+                                                               &none      &tog 1          &mo 3      &none
             >;
         };
         2 {
@@ -131,7 +131,7 @@
                 &none    &msc SCRL_DOWN  &kp UP     &msc SCRL_UP  &none          &none   &kp RALT   &msc SCRL_LEFT  &msc SCRL_RIGHT  &none
                 &none    &kp LEFT        &kp DOWN   &kp RIGHT     &none          &none   &kp RCTRL  &kp RSHFT       &kp RGUI         &none
                 &kp END  &kp PG_DN       &kp PG_UP  &kp HOME      &none          &none   &none      &none           &none            &none
-                                                       &none      &mo 3          &trans      &none
+                                                       &none      &mo 3          &tog 2      &none
             >;
         };
         3 {
